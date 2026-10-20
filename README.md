@@ -1,2 +1,0 @@
-# weather-card
-weather card

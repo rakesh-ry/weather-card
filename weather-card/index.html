@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌤 Weather Card</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="app-title">🌤 Weather Card</h1>
+
+    <div class="search-bar">
+      <input
+        type="text"
+        id="cityInput"
+        placeholder="Enter city name…"
+        aria-label="City name"
+        autocomplete="off"
+      />
+      <button id="searchBtn" aria-label="Search weather">Search</button>
+    </div>
+
+    <div id="error-msg" class="error hidden" role="alert"></div>
+
+    <div id="weatherCard" class="card hidden" aria-live="polite">
+      <div class="card-header">
+        <div>
+          <p class="city-name" id="cityName"></p>
+          <p class="date" id="dateDisplay"></p>
+        </div>
+        <img id="weatherIcon" class="weather-icon" src="" alt="Weather icon" />
+      </div>
+
+      <div class="temp-row">
+        <span class="temperature" id="temperature"></span>
+        <button id="toggleUnit" class="unit-toggle" aria-label="Toggle temperature unit">°C / °F</button>
+      </div>
+
+      <p class="description" id="description"></p>
+
+      <div class="details-grid">
+        <div class="detail-item">
+          <span class="detail-label">💧 Humidity</span>
+          <span class="detail-value" id="humidity"></span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">🌬 Wind</span>
+          <span class="detail-value" id="wind"></span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">👁 Visibility</span>
+          <span class="detail-value" id="visibility"></span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">🌡 Feels Like</span>
+          <span class="detail-value" id="feelsLike"></span>
+        </div>
+      </div>
+    </div>
+
+    <p class="api-note">
+      Powered by <a href="https://openweathermap.org/api" target="_blank" rel="noopener">OpenWeatherMap API</a>.
+      Add your free API key in <code>app.js</code>.
+    </p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
